@@ -13,6 +13,7 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 20px;
+    height: 100vh;
 }
 
 /* Container styles */
@@ -107,11 +108,15 @@ body {
 /* Data table styles */
 .excel-data-table {
     width: 100%;
+    overflow: auto;
     border-collapse: collapse;
     background: #fff;
     font-size: 14px;
     overflow-x: auto;
     display: block;
+    table-layout: fixed;
+    height: 70vh;
+    max-height: 70vh;
 }
 
 .excel-data-table thead {
@@ -119,6 +124,14 @@ body {
     position: sticky;
     top: 0;
     z-index: 10;
+    display: block;
+}
+.excel-data-table body {
+    display: block;
+    height: 65vh;
+    max-height:  65vh;
+    overflow-y: auto;
+    overflow-x: auto;
 }
 
 .excel-data-table th {
@@ -137,6 +150,7 @@ body {
     vertical-align: top;
     word-wrap: break-word;
     max-width: 200px;
+    white-space: break-spaces;
 }
 
 .excel-data-table tbody tr {
@@ -2058,4 +2072,20 @@ body {
     background: #d1ecf1;
     color: #0c5460;
     border: 1px solid #bee5eb;
+}
+.commentftbl 
+
+.commentftbl table tbody, .commentftbl table thead
+{
+    display: block;
+}
+
+.commentftbl table tbody 
+{
+   overflow: auto;
+   height: 400px;
+}
+
+.commentftbl table {
+    width: 100% /* can be dynamic */
 }

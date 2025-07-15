@@ -725,7 +725,7 @@ function excel_processing_comments_all_template() {
                 </div>
                 
                 <div class="table-wrapper">
-                    <table class="wp-list-table widefat fixed striped excel-data-table">
+                    <table class="wp-list-table widefat fixed striped excel-data-table commentftbl">
                         <thead>
                             <tr>
                                 <th>Status</th>
