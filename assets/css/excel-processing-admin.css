@@ -1,0 +1,566 @@
+/* Admin styles for Excel Processing Plugin */
+
+/* Excel data table styles */
+.excel-data-table textarea {
+    width: 100%;
+    max-width: 300px;
+    height: 60px;
+}
+
+.excel-data-table .button {
+    margin-top: 5px;
+}
+
+.excel-data-table .edit-comment {
+    cursor: pointer;
+    display: inline-block;
+}
+
+.excel-data-table .edit-comment .dashicons {
+    vertical-align: middle;
+}
+
+.excel-data-table .delete-record {
+    color: red;
+    text-decoration: none;
+}
+
+.excel-data-table .delete-record:hover {
+    text-decoration: underline;
+}
+
+.wrap h1, .wrap h2 {
+    margin-bottom: 20px;
+}
+
+.updated, .error {
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.updated {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+
+.error {
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+#excel-comment-popup {
+    padding: 20px;
+    background: #fff;
+}
+
+#excel-comment-popup .form-table {
+    width: 100%;
+}
+
+#excel-comment-popup textarea {
+    width: 100%;
+    height: 80px;
+}
+
+.share-link-input {
+    width: 400px;
+    padding: 5px;
+}
+
+.copy-link {
+    margin-left: 5px;
+}
+
+/* Enhanced admin styles */
+.excel-data-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.excel-data-table th,
+.excel-data-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e1e5e9;
+}
+
+.excel-data-table th {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    font-weight: 600;
+    color: #495057;
+}
+
+.excel-data-table tr:hover {
+    background: linear-gradient(135deg, #f8f9ff 0%, #f0f2ff 100%);
+}
+
+/* Comment content styles for admin */
+.comment-content {
+    display: inline-block;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #666;
+    font-style: italic;
+    padding: 5px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    border-left: 3px solid #e9ecef;
+}
+
+.comment-content.has-content {
+    color: #333;
+    font-style: normal;
+    background: #e8f5e8;
+    border-left-color: #28a745;
+}
+
+/* Status indicators for admin */
+.status-indicator {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.status-indicator.has-comments {
+    background: #28a745;
+}
+
+.status-indicator.no-comments {
+    background: #dc3545;
+}
+
+/* Admin notice styles */
+.admin-notice {
+    background: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.admin-notice strong {
+    color: #0a4b53;
+}
+
+/* User Guide Section */
+.user-guide-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    margin: 20px 0;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.user-guide-section h2 {
+    color: white;
+    margin: 0 0 25px 0;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.guide-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.guide-section {
+    background: rgba(255, 255, 255, 0.95);
+    color: #333;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.guide-section h3 {
+    color: #667eea;
+    margin: 0 0 15px 0;
+    font-size: 20px;
+    font-weight: 600;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 8px;
+}
+
+.guide-section h4 {
+    color: #764ba2;
+    margin: 20px 0 10px 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.guide-section ol,
+.guide-section ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.guide-section li {
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+.guide-section strong {
+    color: #667eea;
+    font-weight: 600;
+}
+
+.guide-section code {
+    background: #f8f9fa;
+    color: #e83e8c;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    border: 1px solid #e9ecef;
+}
+
+/* User Management Info */
+.user-management-info {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+}
+
+.user-management-info ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.user-management-info li {
+    padding: 5px 0;
+    position: relative;
+    padding-left: 25px;
+}
+
+.user-management-info li:before {
+    content: attr(data-icon);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* Access Info */
+.access-info {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #667eea;
+}
+
+.access-info p {
+    margin: 15px 0;
+    font-size: 16px;
+}
+
+.access-info code {
+    background: #667eea;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    display: inline-block;
+    margin: 10px 0;
+    word-break: break-all;
+}
+
+/* Display Info */
+.display-info {
+    background: #fff3cd;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #ffc107;
+}
+
+.display-info ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.display-info li {
+    padding: 5px 0;
+    position: relative;
+    padding-left: 25px;
+}
+
+.display-info li:before {
+    content: "✅";
+    position: absolute;
+    left: 0;
+}
+
+/* Troubleshooting Info */
+.troubleshooting-info {
+    background: #f8d7da;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #dc3545;
+}
+
+.troubleshooting-info ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.troubleshooting-info li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(220, 53, 69, 0.2);
+}
+
+.troubleshooting-info li:last-child {
+    border-bottom: none;
+}
+
+/* Copy Link Button */
+.copy-link {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%) !important;
+    color: white !important;
+    border: none !important;
+    padding: 8px 16px !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+    margin-left: 10px !important;
+}
+
+.copy-link:hover {
+    background: linear-gradient(135deg, #218838 0%, #1ea085 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3) !important;
+}
+
+/* Settings Page Styling */
+.settings-section {
+    background: white;
+    border: 1px solid #e1e5e9;
+    border-radius: 8px;
+    margin: 20px 0;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.settings-section h2 {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    margin: 0;
+    padding: 20px 25px;
+    font-size: 20px;
+    font-weight: 600;
+    border-bottom: 1px solid #e1e5e9;
+}
+
+.settings-content {
+    padding: 25px;
+    line-height: 1.6;
+}
+
+.settings-content h3 {
+    color: #667eea;
+    margin: 25px 0 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 8px;
+}
+
+.settings-content h3:first-child {
+    margin-top: 0;
+}
+
+.settings-content p {
+    margin: 15px 0;
+    font-size: 16px;
+}
+
+.settings-content ol,
+.settings-content ul {
+    margin: 15px 0;
+    padding-left: 25px;
+}
+
+.settings-content li {
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+.settings-content strong {
+    color: #667eea;
+    font-weight: 600;
+}
+
+.settings-content code {
+    background: #f8f9fa;
+    color: #e83e8c;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    border: 1px solid #e9ecef;
+    display: inline-block;
+    margin: 5px 0;
+}
+
+.settings-content ul li {
+    position: relative;
+    padding-left: 5px;
+}
+
+/* Responsive settings */
+@media (max-width: 768px) {
+    .excel-data-table {
+        font-size: 12px;
+    }
+    
+    .excel-data-table th,
+    .excel-data-table td {
+        padding: 8px 6px;
+    }
+    
+    .comment-content {
+        max-width: 150px;
+    }
+    
+    .share-link-input {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .guide-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .user-guide-section {
+        padding: 20px;
+    }
+    
+    .guide-section {
+        padding: 20px;
+    }
+    
+    .user-guide-section h2 {
+        font-size: 24px;
+    }
+    
+    .guide-section h3 {
+        font-size: 18px;
+    }
+
+    .settings-section h2 {
+        font-size: 18px;
+        padding: 15px 20px;
+    }
+    
+    .settings-content {
+        padding: 20px;
+    }
+    
+    .settings-content h3 {
+        font-size: 16px;
+    }
+}
+
+/* Quick Info Section */
+.quick-info-section {
+    background: white;
+    border: 1px solid #e1e5e9;
+    border-radius: 8px;
+    margin: 20px 0;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.quick-info-section h2 {
+    color: #667eea;
+    margin: 0 0 15px 0;
+    font-size: 20px;
+    font-weight: 600;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+.quick-info-section p {
+    margin: 15px 0;
+    line-height: 1.6;
+    color: #50575e;
+}
+
+.quick-info-section code {
+    background: #f8f9fa;
+    color: #e83e8c;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    border: 1px solid #e9ecef;
+}
+
+.share-link-input {
+    background: #f8f9fa !important;
+    border: 2px solid #e1e5e9 !important;
+    border-radius: 6px !important;
+    padding: 10px 12px !important;
+    font-family: 'Courier New', monospace !important;
+    font-size: 14px !important;
+    color: #667eea !important;
+    margin-right: 10px !important;
+}
+
+.share-link-input:focus {
+    border-color: #667eea !important;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1) !important;
+}
+
+/* Requirements Info */
+.requirements-info {
+    background: #e8f4fd;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #17a2b8;
+}
+
+.requirements-info ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.requirements-info li {
+    padding: 5px 0;
+    position: relative;
+    padding-left: 25px;
+}
+
+.requirements-info li:before {
+    content: "📋";
+    position: absolute;
+    left: 0;
+}
+
+.requirements-info ol {
+    background: #f8f9fa;
+    padding: 15px 20px;
+    border-radius: 6px;
+    border: 1px solid #e9ecef;
+}
+
+.requirements-info ol li {
+    padding: 3px 0;
+    padding-left: 0;
+}
+
+.requirements-info ol li:before {
+    content: none;
+}

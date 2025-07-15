@@ -1,0 +1,2061 @@
+/* Frontend styles for Excel Processing Plugin - Modern Design */
+
+/* Reset and base styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Container styles */
+.excel-comments-edit {
+    max-width: 1400px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.excel-comments-edit h1 {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    margin: 0;
+    padding: 30px;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Password form styles */
+.excel-password-form {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 40px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.excel-password-form h2 {
+    margin: 0 0 30px 0;
+    color: #333;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.excel-password-form p {
+    margin: 0 0 20px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.excel-password-form label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 500;
+    color: #555;
+    text-align: left;
+}
+
+.excel-password-form input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.excel-password-form input[type="password"]:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.excel-password-form input[type="submit"] {
+    width: 100%;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.excel-password-form input[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+/* Data table styles */
+.excel-data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    font-size: 14px;
+    overflow-x: auto;
+    display: block;
+}
+
+.excel-data-table thead {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.excel-data-table th {
+    padding: 15px 12px;
+    text-align: left;
+    font-weight: 600;
+    color: #495057;
+    border-bottom: 2px solid #dee2e6;
+    white-space: nowrap;
+    min-width: 120px;
+}
+
+.excel-data-table td {
+    padding: 12px;
+    border-bottom: 1px solid #e9ecef;
+    vertical-align: top;
+    word-wrap: break-word;
+    max-width: 200px;
+}
+
+.excel-data-table tbody tr {
+    transition: all 0.3s ease;
+}
+
+.excel-data-table tbody tr:hover {
+    background: linear-gradient(135deg, #f8f9ff 0%, #f0f2ff 100%);
+    transform: scale(1.01);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Comment cell styles */
+.comment-cell {
+    position: relative;
+    min-height: 40px;
+}
+
+.comment-cell:hover .edit-comment {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Comment editing styles */
+.edit-comment {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 10px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-right: 8px;
+    text-decoration: none;
+    opacity: 0.8;
+    transform: translateY(-2px);
+}
+
+.edit-comment:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+    color: white;
+    text-decoration: none;
+    opacity: 1;
+}
+
+.edit-comment .dashicons {
+    margin-right: 4px;
+    font-size: 14px;
+}
+
+.edit-comment .edit-text {
+    font-size: 11px;
+}
+
+/* Comment content styles */
+.comment-content {
+    display: inline-block;
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #666;
+    font-style: italic;
+    margin-top: 5px;
+    padding: 5px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    border-left: 3px solid #e9ecef;
+}
+
+.comment-content.has-content {
+    color: #333;
+    font-style: normal;
+    background: #e8f5e8;
+    border-left-color: #28a745;
+}
+
+/* Popup dialog styles */
+.ui-dialog {
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    border: none;
+}
+
+.ui-dialog .ui-dialog-titlebar {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 12px 12px 0 0;
+    padding: 20px;
+}
+
+.ui-dialog .ui-dialog-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.ui-dialog .ui-dialog-content {
+    padding: 30px;
+    background: #fff;
+}
+
+.ui-dialog .ui-dialog-buttonpane {
+    background: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+    padding: 20px;
+    border-radius: 0 0 12px 12px;
+}
+
+.ui-dialog .ui-button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ui-dialog .ui-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.ui-dialog .ui-button.ui-dialog-buttonset .ui-button:last-child {
+    background: #6c757d;
+}
+
+.ui-dialog .ui-button.ui-dialog-buttonset .ui-button:last-child:hover {
+    background: #5a6268;
+}
+
+/* Form table styles */
+.form-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.form-table th {
+    padding: 15px 20px 15px 0;
+    text-align: left;
+    font-weight: 600;
+    color: #495057;
+    vertical-align: top;
+    width: 150px;
+}
+
+.form-table td {
+    padding: 15px 0;
+}
+
+.form-table textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 12px;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    resize: vertical;
+    transition: all 0.3s ease;
+}
+
+.form-table textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Page footer styles */
+.page-footer {
+    background: #f8f9fa;
+    padding: 20px;
+    border-top: 1px solid #e9ecef;
+    text-align: center;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-around;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.footer-info p {
+    margin: 0;
+    color: #6c757d;
+    font-size: 14px;
+}
+
+.footer-info strong {
+    color: #495057;
+}
+
+/* Message styles */
+.message {
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin: 20px;
+    font-weight: 500;
+}
+
+.message.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.message.info {
+    background: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .excel-comments-edit h1 {
+        font-size: 24px;
+        padding: 20px;
+    }
+    
+    .excel-data-table {
+        font-size: 12px;
+    }
+    
+    .excel-data-table th,
+    .excel-data-table td {
+        padding: 8px 6px;
+        min-width: 80px;
+    }
+    
+    .edit-comment {
+        padding: 4px 8px;
+        font-size: 11px;
+    }
+    
+    .ui-dialog {
+        width: 95% !important;
+        max-width: 500px;
+    }
+    
+    .form-table th {
+        display: block;
+        width: 100%;
+        padding: 10px 0 5px 0;
+    }
+    
+    .form-table td {
+        display: block;
+        padding: 0 0 15px 0;
+    }
+    
+    .footer-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Loading states */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #667eea;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Search and filter styles */
+.search-container {
+    background: #f8f9fa;
+    padding: 20px;
+    border-bottom: 1px solid #e9ecef;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.search-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 15px;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.row-count {
+    color: #6c757d;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Table wrapper for horizontal scroll */
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: 0 0 12px 12px;
+    background: #fff;
+}
+
+/* Status indicators */
+.status-indicator {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.status-indicator.has-comments {
+    background: #28a745;
+}
+
+.status-indicator.no-comments {
+    background: #dc3545;
+}
+
+/* Export button styles */
+.export-button {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.export-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+/* Bulk actions styles */
+.bulk-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bulk-actions input[type="checkbox"] {
+    margin: 0;
+}
+
+.bulk-actions label {
+    margin: 0;
+    font-weight: 500;
+    color: #495057;
+}
+
+/* Selected row styles */
+.excel-data-table tbody tr.selected {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    border-left: 4px solid #2196f3;
+}
+
+/* Tooltip styles */
+.tooltip {
+    position: absolute;
+    background: #333;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    z-index: 1000;
+    max-width: 300px;
+    word-wrap: break-word;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Enhanced form styles for popup */
+.form-container {
+    padding: 0;
+}
+
+.form-header {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.form-header h3 {
+    margin: 0 0 5px 0;
+    color: #333;
+    font-size: 18px;
+}
+
+.form-subtitle {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.form-section {
+    margin-bottom: 25px;
+}
+
+.form-section h4 {
+    margin: 0 0 15px 0;
+    color: #495057;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #495057;
+}
+
+.char-count {
+    font-size: 12px;
+    color: #6c757d;
+    font-weight: normal;
+}
+
+.char-count.warning {
+    color: #dc3545;
+}
+
+.enhanced-textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    resize: vertical;
+    transition: all 0.3s ease;
+    min-height: 80px;
+}
+
+.enhanced-textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.enhanced-textarea.error {
+    border-color: #dc3545;
+}
+
+.field-error {
+    color: #dc3545;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.form-actions {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid #e9ecef;
+}
+
+.form-info {
+    text-align: center;
+}
+
+.info-text {
+    color: #6c757d;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.ui-dialog.saving .ui-dialog-content {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.save-button {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%) !important;
+}
+
+.save-button:hover {
+    background: linear-gradient(135deg, #218838 0%, #1ea085 100%) !important;
+}
+
+.cancel-button {
+    background: #6c757d !important;
+}
+
+.cancel-button:hover {
+    background: #5a6268 !important;
+}
+
+/* Excel Data Container - Shortcode */
+.excel-data-container {
+    margin: 20px 0;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.excel-data-container .table-wrapper {
+    overflow-x: auto;
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.excel-data-container .excel-data-table {
+    width: 100%;
+    min-width: 1200px;
+    border-collapse: collapse;
+    background: #fff;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.excel-data-container .excel-data-table th {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 12px 8px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    white-space: nowrap;
+}
+
+.excel-data-container .excel-data-table td {
+    padding: 10px 8px;
+    border-bottom: 1px solid #e1e5e9;
+    vertical-align: top;
+    word-wrap: break-word;
+    max-width: 200px;
+}
+
+.excel-data-container .excel-data-table tbody tr:hover {
+    background-color: #f8f9fa;
+    transition: background-color 0.2s ease;
+}
+
+.excel-data-container .excel-data-table tbody tr:nth-child(even) {
+    background-color: #fafbfc;
+}
+
+/* Responsive design for shortcode */
+@media (max-width: 768px) {
+    .excel-data-container .table-wrapper {
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .excel-data-container .excel-data-table {
+        font-size: 12px;
+    }
+    
+    .excel-data-container .excel-data-table th,
+    .excel-data-container .excel-data-table td {
+        padding: 8px 6px;
+        min-width: 100px;
+    }
+    
+    .excel-data-container .excel-data-table th {
+        font-size: 11px;
+    }
+}
+
+/* Scrollbar styling for shortcode */
+.excel-data-container .table-wrapper::-webkit-scrollbar {
+    height: 8px;
+}
+
+.excel-data-container .table-wrapper::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.excel-data-container .table-wrapper::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 4px;
+}
+
+.excel-data-container .table-wrapper::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+}
+
+/* Header Section */
+.header-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 25px 30px;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.header-section h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 16px;
+}
+
+.user-info span {
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+.logout-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.logout-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive header */
+@media (max-width: 768px) {
+    .header-section {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .header-section h1 {
+        font-size: 24px;
+    }
+    
+    .user-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Excel Data Container - Enhanced Shortcode */
+.excel-data-container {
+    margin: 20px 0;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Stats Bar */
+.excel-stats-bar {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.stats-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.stats-label {
+    font-size: 12px;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+}
+
+.stats-value {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* Search Section */
+.excel-search-section {
+    background: #f8f9fa;
+    padding: 20px 25px;
+    border-bottom: 1px solid #e1e5e9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    overflow: hidden;
+    flex: 1;
+    max-width: 400px;
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    padding: 12px 16px;
+    font-size: 14px;
+    outline: none;
+}
+
+.search-input:focus {
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.search-btn {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+    background: #5a6fd8;
+}
+
+.filter-select {
+    padding: 10px 12px;
+    border: 2px solid #e1e5e9;
+    border-radius: 6px;
+    background: white;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+}
+
+.filter-select:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Enhanced Table */
+.excel-data-container .table-wrapper {
+    overflow-x: auto;
+    max-width: 100%;
+    border-radius: 0;
+}
+
+.excel-data-container .excel-data-table {
+    width: 100%;
+    min-width: 1400px;
+    border-collapse: collapse;
+    background: #fff;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.excel-data-container .excel-data-table th {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    color: #495057;
+    padding: 15px 12px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    white-space: nowrap;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.excel-data-container .excel-data-table th.sortable {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.excel-data-container .excel-data-table th.sortable:hover {
+    background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+}
+
+.sort-icon {
+    margin-left: 5px;
+    opacity: 0.5;
+    font-size: 12px;
+}
+
+.excel-data-container .excel-data-table td {
+    padding: 12px;
+    border-bottom: 1px solid #f1f3f4;
+    vertical-align: top;
+    word-wrap: break-word;
+    max-width: 200px;
+}
+
+.excel-data-container .excel-data-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.excel-data-container .excel-data-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.excel-data-container .excel-data-table tbody tr:nth-child(even) {
+    background-color: #fafbfc;
+}
+
+/* Specific Cell Styling */
+.invoice-id {
+    font-weight: 600;
+    color: #667eea;
+}
+
+.date-cell {
+    white-space: nowrap;
+}
+
+.date-value {
+    color: #6c757d;
+    font-size: 13px;
+}
+
+.patient-name {
+    font-weight: 500;
+    color: #495057;
+}
+
+.service-code {
+    background: #e3f2fd;
+    color: #1976d2;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.address-content {
+    max-height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    font-size: 13px;
+    color: #6c757d;
+}
+
+.mileage {
+    text-align: center;
+    font-weight: 500;
+    color: #495057;
+}
+
+.price-invoiced,
+.amount-received {
+    text-align: right;
+    font-weight: 600;
+    color: #28a745;
+}
+
+.amount-due {
+    text-align: right;
+}
+
+.amount-value {
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.amount-value.outstanding {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.amount-value.paid {
+    background: #d4edda;
+    color: #155724;
+}
+
+.notes-content {
+    max-height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    font-size: 13px;
+    color: #6c757d;
+}
+
+.comment-cell {
+    position: relative;
+}
+
+.comment-content {
+    max-height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    font-size: 13px;
+    padding: 8px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.comment-content.has-content {
+    background: #e8f5e8;
+    color: #2e7d32;
+    border-left: 3px solid #4caf50;
+}
+
+.comment-content.empty {
+    background: #f8f9fa;
+    color: #6c757d;
+    font-style: italic;
+    border-left: 3px solid #dee2e6;
+}
+
+/* No Data Message */
+.no-data {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.no-data-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #6c757d;
+}
+
+.no-data-message .dashicons {
+    font-size: 48px;
+    margin-bottom: 15px;
+    opacity: 0.5;
+}
+
+.no-data-message p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Pagination */
+.excel-pagination {
+    background: #f8f9fa;
+    padding: 20px 25px;
+    border-top: 1px solid #e1e5e9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.pagination-info {
+    color: #6c757d;
+    font-size: 14px;
+}
+
+.pagination-controls {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.pagination-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    border: 1px solid #dee2e6;
+    background: white;
+    color: #495057;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    min-width: 36px;
+    height: 36px;
+}
+
+.pagination-btn:hover {
+    background: #667eea;
+    color: white;
+    border-color: #667eea;
+    text-decoration: none;
+}
+
+.pagination-btn.active {
+    background: #667eea;
+    color: white;
+    border-color: #667eea;
+}
+
+.page-numbers {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.page-ellipsis {
+    padding: 8px 12px;
+    color: #6c757d;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .excel-stats-bar {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .excel-search-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .search-box {
+        max-width: none;
+    }
+    
+    .excel-pagination {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .pagination-controls {
+        justify-content: center;
+    }
+    
+    .excel-data-container .excel-data-table {
+        font-size: 12px;
+        min-width: 1200px;
+    }
+    
+    .excel-data-container .excel-data-table th,
+    .excel-data-container .excel-data-table td {
+        padding: 8px 6px;
+    }
+    
+    .excel-data-container .excel-data-table th {
+        font-size: 11px;
+    }
+}
+
+/* Scrollbar styling */
+.excel-data-container .table-wrapper::-webkit-scrollbar {
+    height: 8px;
+}
+
+.excel-data-container .table-wrapper::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.excel-data-container .table-wrapper::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 4px;
+}
+
+.excel-data-container .table-wrapper::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+}
+
+/* Tooltip Styling */
+.excel-tooltip {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    max-width: 300px;
+    word-wrap: break-word;
+    z-index: 10000;
+    pointer-events: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+.excel-tooltip:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Loading States */
+.loading {
+    position: relative;
+    pointer-events: none;
+}
+
+.loading:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    margin: -8px 0 0 -8px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #667eea;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #667eea;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 10000;
+    font-weight: 500;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Scroll Hint */
+.scroll-hint {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 0 0 8px 8px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+/* Enhanced Hover Effects */
+.excel-data-container .excel-data-table tbody tr:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.excel-data-container .excel-data-table tbody tr:hover .invoice-id {
+    color: #5a6fd8;
+}
+
+.excel-data-container .excel-data-table tbody tr:hover .service-code {
+    background: #bbdefb;
+    color: #1565c0;
+}
+
+/* Search Results Highlighting */
+.search-highlight {
+    background: #fff3cd;
+    color: #856404;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-weight: 600;
+}
+
+/* Enhanced Pagination */
+.pagination-btn.loading {
+    background: #f8f9fa;
+    color: #6c757d;
+}
+
+.pagination-btn.loading:after {
+    width: 12px;
+    height: 12px;
+    margin: -6px 0 0 -6px;
+    border-width: 1px;
+    border-top-width: 1px;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+    .excel-stats-bar {
+        padding: 15px 20px;
+    }
+    
+    .stats-value {
+        font-size: 16px;
+    }
+    
+    .excel-search-section {
+        padding: 15px 20px;
+    }
+    
+    .search-box {
+        margin-bottom: 10px;
+    }
+    
+    .filter-select {
+        width: 100%;
+    }
+    
+    .excel-pagination {
+        padding: 15px 20px;
+    }
+    
+    .pagination-controls {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .page-numbers {
+        order: -1;
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    
+    .scroll-hint {
+        font-size: 11px;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .excel-data-container {
+        margin: 10px 0;
+        border-radius: 8px;
+    }
+    
+    .excel-stats-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .stats-item {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    .stats-label {
+        margin-bottom: 0;
+        margin-right: 10px;
+    }
+    
+    .excel-search-section {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .search-box {
+        max-width: none;
+    }
+    
+    .excel-pagination {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .pagination-info {
+        text-align: center;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .excel-stats-bar,
+    .excel-search-section,
+    .excel-pagination {
+        display: none;
+    }
+    
+    .excel-data-container {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+    
+    .excel-data-container .excel-data-table {
+        font-size: 12px;
+    }
+    
+    .excel-data-container .excel-data-table th {
+        background: #f8f9fa !important;
+        color: #000 !important;
+    }
+}
+
+/* Accessibility Improvements */
+.excel-data-container .excel-data-table th.sortable:focus {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+}
+
+.search-input:focus,
+.filter-select:focus {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+}
+
+.pagination-btn:focus {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    .excel-data-container {
+        border: 2px solid #000;
+    }
+    
+    .excel-data-container .excel-data-table th {
+        background: #000 !important;
+        color: #fff !important;
+    }
+    
+    .excel-data-container .excel-data-table tbody tr:hover {
+        background: #000 !important;
+        color: #fff !important;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .excel-data-container .excel-data-table tbody tr,
+    .pagination-btn,
+    .search-btn,
+    .comment-content {
+        transition: none;
+    }
+    
+    .loading:after {
+        animation: none;
+    }
+    
+    .scroll-hint {
+        animation: none;
+    }
+    
+    .loading-message {
+        animation: none;
+    }
+}
+
+/* Excel Comments Editor Styles */
+.excel-comments-edit {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f8f9fa;
+    min-height: 100vh;
+}
+
+.header-section {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-left h1 {
+    margin: 0 0 8px 0;
+    color: #2c3e50;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.header-subtitle {
+    margin: 0;
+    color: #6c757d;
+    font-size: 16px;
+}
+
+.header-right .user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-name {
+    font-weight: 600;
+    color: #495057;
+}
+
+.logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: #dc3545;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+    background: #c82333;
+    color: white;
+    text-decoration: none;
+}
+
+.stats-bar {
+    display: flex;
+    gap: 30px;
+    padding: 15px 0;
+    border-top: 1px solid #e9ecef;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+}
+
+.stat-value {
+    font-size: 18px;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+/* Search Section */
+.search-section {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #e9ecef;
+}
+
+.search-form {
+    margin: 0;
+}
+
+.search-inputs {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.search-input {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px 15px;
+    border: 2px solid #e9ecef;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.search-field {
+    padding: 10px 15px;
+    border: 2px solid #e9ecef;
+    border-radius: 6px;
+    font-size: 14px;
+    background: white;
+    min-width: 150px;
+}
+
+.search-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+    background: #0056b3;
+}
+
+.clear-search-btn {
+    background: #6c757d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.clear-search-btn:hover {
+    background: #545b62;
+    color: white;
+    text-decoration: none;
+}
+
+/* Table Styles */
+.table-wrapper {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.excel-data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    min-width: 1200px;
+}
+
+.excel-data-table th {
+    background: #f8f9fa;
+    padding: 12px 8px;
+    text-align: left;
+    font-weight: 600;
+    color: #495057;
+    border-bottom: 2px solid #dee2e6;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    white-space: nowrap;
+}
+
+.excel-data-table td {
+    padding: 8px;
+    border-bottom: 1px solid #e9ecef;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.excel-data-table tbody tr:hover {
+    background: #f8f9fa;
+}
+
+/* Status Indicator */
+.status-indicator {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.status-indicator.has-comments {
+    background: #28a745;
+}
+
+.status-indicator.no-comments {
+    background: #6c757d;
+}
+
+/* Address and Notes Cells */
+.address-cell, .billing-notes-cell {
+    max-width: 150px;
+    word-wrap: break-word;
+    white-space: normal;
+    line-height: 1.4;
+    font-size: 12px;
+}
+
+/* Amount Due Styling */
+.amount-due {
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+.amount-due.outstanding {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.amount-due.paid {
+    background: #d4edda;
+    color: #155724;
+}
+
+/* Comment Cells */
+.comment-cell {
+    position: relative;
+    min-width: 120px;
+    max-width: 150px;
+}
+
+.comment-cell:hover {
+    background: #e3f2fd;
+}
+
+.comment-content {
+    position: relative;
+    padding: 6px;
+    border-radius: 4px;
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    min-height: 30px;
+    word-wrap: break-word;
+    white-space: normal;
+    line-height: 1.3;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.comment-content.has-content {
+    background: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.edit-comment {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 2px 6px;
+    font-size: 10px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    z-index: 5;
+}
+
+.comment-cell:hover .edit-comment {
+    opacity: 1;
+}
+
+.edit-comment:hover {
+    background: #0056b3;
+}
+
+.edit-text {
+    font-size: 9px;
+}
+
+/* Pagination Styles */
+.pagination-wrapper {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.pagination-info {
+    color: #6c757d;
+    font-size: 14px;
+}
+
+.pagination-controls {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.pagination-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    border: 1px solid #dee2e6;
+    background: white;
+    color: #495057;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    min-width: 35px;
+    height: 35px;
+}
+
+.pagination-btn:hover {
+    background: #e9ecef;
+    color: #495057;
+    text-decoration: none;
+}
+
+.pagination-btn.active {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.page-numbers {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.page-ellipsis {
+    color: #6c757d;
+    padding: 0 5px;
+}
+
+/* Page Footer */
+.page-footer {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer-info {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-info p {
+    margin: 0;
+    color: #6c757d;
+    font-size: 14px;
+}
+
+.footer-info strong {
+    color: #495057;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .excel-comments-edit {
+        padding: 10px;
+    }
+    
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .stats-bar {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .search-inputs {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .search-input, .search-field {
+        min-width: auto;
+    }
+    
+    .pagination-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .pagination-controls {
+        justify-content: center;
+    }
+    
+    .footer-info {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .table-wrapper {
+        overflow-x: auto;
+    }
+    
+    .excel-data-table {
+        min-width: 800px;
+    }
+}
+
+/* Message Styles */
+.message {
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.message.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.message.info {
+    background: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+}
